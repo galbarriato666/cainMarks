@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- *****************************************************
+NOMBRE: EMMANUEL 
+APELLIDOS: MANZANILLA GARCIA
+*********************************************************** -->
+<html lang="es-ES">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/imagenes/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./../css/contacto.css" />
+	<title>Contacto</title>
+</head>
+<body>
+	<header class="logo">
+		<img src="./../imagenes/RetroGamingLogo2.jpg" alt="Logo-RetroGaming">
+	</header>
+	<nav id="menu">
+		<ul>
+			<li class="menu">
+				<a href="./../index.html">Inicio</a>
+			</li>
+			<li class="menu">
+				<a href="./../index.html">Sobre mí</a>
+			</li>
+			<li class="menu">
+				<a href="./../listado/listado.html">Videojuegos</a>
+			</li>
+			<li class="menu">
+				<a href="contacto.html">Contacto</a>
+			</li>
+			<li class="menu">
+				<a href="http://www.homerswebpage.com" target="_blank">Otras cosas</a>
+			</li>
+		</ul>
+	</nav>
+<div class="grid-container">
+	<div class="contacto">
+		<form action="formget.php" method="get">                   
+			<p>
+			  <label for="nombre">Nombre
+				<span>*</span>
+			  </label>
+				<input type="text" name="introducir_nombre" id="nombre" placeholder="Escribe tu nombrecito" required>
+			</p>
+			  <label for="email">Email
+				<span>*</span>
+			  </label>
+				<input type="email" name="introducir_email" id="email" placeholder="Escribe tu Emailcito" required>
+			
+			<p>
+			  <label for="telefono">Teléfono
+			  </label>
+				<input type="tel" name="telefono" id="telefono" placeholder="Escribe tu telefonito">
+			</p>    
+			<p>
+			  <label for="asunto">Asunto
+				<span>*</span>
+			  </label>
+				<input name="introducir_asunto" id="asunto"  placeholder="Escribe un asuntito" required>
+			</p>    
+			
+			  <label for="mensaje">Mensaje
+				<span>*</span>
+			  </label>            
+			<textarea name="comment" id="mensaje" placeholder="Deja aquí tu comentarito..." required></textarea> <br>
+			               
+		  
+			<button type="submit" name="enviar_formulario" id="enviar">Enviar</button>
+
+			<p>
+			  <span> * </span>los campos son obligatorios.
+			</p>          
+	  </form>
+	</div>	
+	
+	<figure>
+		<img src="./../imagenes/vaporwave.gif" alt="EstásHipnotizadoUuUUUu">
+	</figure>
+</div>	
+	<footer id="foot">
+		<ul>
+			<li class="social">
+				<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+			</li>
+			<li class="social">
+				<a href="https://twitter.com/" target="_blank">Twitter</a>
+			</li>
+			<li class="social">
+				<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+			</li>
+			<li class="social">
+				<a href="https://www.pinterest.com/" target="_blank">Pinterest</a>	
+			</li>
+			<li class="social">
+				<a href="mailto:info@retrograming.com?subject=El%20asunto%20va%20aquí&body=El%20mensaje%20va%20aquí">Email</a>			
+			</li>
+			<li class="social">
+				<a href="https://www.rssboard.org/" target="_blank">RSS</a>
+			</li>
+		</ul>
+	</footer>		
+</body>
+</html>

@@ -1,0 +1,249 @@
+body{
+    background: coral;
+    margin: 0rem;
+    padding: 0rem;
+    font-size: 16px;
+}
+
+.logo{
+    display:flex;
+    justify-content: center;
+}
+
+#menu{
+    background: #FFF;  
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width:100%;   
+}
+#menu ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    text-align: center;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    width: 100%;
+}
+
+#menu ul li {
+    display: inline-block;    
+}
+
+#menu a {
+    font-family: Arial;
+    font-size: 0.875rem;
+    color: black;
+    text-decoration:none;
+    display:block;
+    padding: 0.75rem 1.9375rem;
+    text-transform: uppercase;
+}
+
+#menu a:hover{
+    color:crimson;
+    background: rgba(0,0,0,0.2);
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(min(100%, 28rem), 1fr));
+    background-color: white;        
+    gap: 4rem;
+    width: 40%;
+    height: fit-content;
+    margin: 0 auto;
+}
+     
+.tabla{
+    
+    margin: 10px auto;
+    border: 1px solid black;  
+
+}
+
+th, td {
+    width: 25%;
+    border: 1px solid #000;
+}
+
+
+.mario{
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.875rem; 
+      
+}
+
+.mario img {
+    margin-top: 4rem;
+    width:80%;
+}
+
+.mario p{
+    margin: auto 5px;
+    text-align: justify;
+    font-family: Arial;
+    font-size: 0.875rem;    
+}
+
+img[alt~="chamo"] {
+    width:100%;
+    margin-top: 10px;
+
+}
+
+img[alt~="timeup"] {
+    width:100%;
+    margin-top: 10px;
+}
+
+
+
+
+.zelda{
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.875rem; 
+      
+}
+
+.zelda p{
+    margin: auto 5px;
+    text-align: justify;
+    font-family: Arial;
+    font-size: 0.875rem;    
+}
+
+.zelda img {
+    margin-top: 4rem;
+    width:80%;
+}
+
+img[alt~="zeldita"] {
+    width:100%;
+    margin-top: 10px;
+
+}
+
+img[alt~="portal"] {
+    width:100%;
+    margin-top: 10px;
+}
+
+
+
+
+
+.ffvii{
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.875rem; 
+      
+}
+
+.ffvii p{
+    margin: auto 5px;
+    text-align: justify;
+    font-family: Arial;
+    font-size: 0.875rem;    
+}
+
+.ffvii img {
+    margin-top: 4rem;
+    width:80%;
+}
+
+img[alt~="remake"] {
+    width:100%;
+    margin-top: 10px;
+
+}
+
+img[alt~="final"] {
+    width:100%;
+    margin-top: 10px;
+}
+
+
+
+.crazy{
+    text-align: center;
+    font-family: Arial;
+    font-size: 0.875rem; 
+      
+}
+
+.crazy p{
+    margin: auto 5px;
+    text-align: justify;
+    font-family: Arial;
+    font-size: 0.875rem;    
+}
+
+.crazy img {
+    margin-top: 4rem;
+    width:80%;
+}
+
+img[alt~="muycrazyjaja"] {
+    width:100%;
+    margin-top: 10px;
+
+}
+
+img[alt~="volandovoy"] {
+    width:100%;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+#foot{
+    background: black;  
+    position:static;
+  
+}
+
+#foot ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+    text-align: center;
+    border-top: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+    }
+
+.social {
+    display: inline-block;
+}
+
+.social a{
+    font-family: Arial;
+    font-size: 0.875rem;
+    color: white;
+    text-decoration:none;
+    display:block;
+    padding: 1.875rem 1.9375rem;
+    text-transform: uppercase;
+}
+
+.social a:hover{
+    color:crimson;
+    background: lightgray;
+}
+
