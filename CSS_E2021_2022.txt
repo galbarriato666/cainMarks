@@ -1,0 +1,588 @@
+CSS3
+M04 - Llenguatge de marques
+Eduardo Tejero
+Alicia Vázquez
+
+HTML5 - recap
+
+HTML5 
+Tot document HTML ha de tenir un mínim d’elements i una estructura molt marcada essent <html> l’arrel del document.
+En <head> posarem els elements necessaris pel navegador, no hi ha dades.
+En <body> és on posarem tota la informació visible a l’usuari (text, imatges, videos…).
+HTML5 ofereix un valor semàntic a tots els seus tags, d’aquesta manera podrem distribuir correctament les dades y així facilitar la seva comprensió per part de les “màquines”.
+
+
+CSS3
+
+CSS
+CSS (Cascading Style Sheets), en català "Fulls d’estil en cascada", és un llenguatge de disseny gràfic per a definir i crear la presentació d’un document estructurat escrit en un llenguatge de marques.
+És molt utilitzat per establir el disseny visual dels documents web, i interfícies d'usuari escrites en un llenguatge de marques.
+CSS està dissenyat principalment per marcar la separació del contingut (html) del document i la forma de presentació d’aquest, característiques tals com les capes o layouts, els colors o les fonts.
+
+Cascading Style Sheets
+Fulls d’estil en cascada: Utilitzant un sol fitxer css podem definir l’estil de totes les pàgines html del nostre projecte.
+Guardarem en el fitxer CSS principal
+l’estil general de les nostres pàgines, de la nostra web
+ i canviarem concretament l’estil en un html si 
+fos necessari.
+
+Definir un estil a cada HTML, 
+dificulta el manteniment.
+
+
+Sintaxi de CSS
+
+
+
+
+Els elements seran aquells que trobem en el body, no els del head, donat que aquests no es visualitzen.h1{	color: red;} /*Això sería un comentari*/ 
+
+  etiqueta { 
+propietat: valor;
+propietat: valor;  }
+
+Afegir enllaços al css en el <head> de la pàgina html mitjançant <link>
+<head>
+<link rel="stylesheet" href="01.css">
+		</head>
+Definir directament l’estil dins del <head> de la página html utilitzant el tag  <style>
+<head>
+<style> 
+element{
+propietat1: valor;
+propietat2: valor;
+}
+</style>
+</head>
+
+Enllaçar css amb html (I)
+
+Directament en l’element en el que volem aplicar o canviar l’estil. 
+
+Podem utilitzar la propietat style que tindrà com a valor tot el codi de l’estil separat per punts i comes.
+<element style="propietat1: valor; propietat2: valor;”> </element>
+
+Podem anar propietat a propietat i anar canviant el seu valor.
+<element propietat1="valor” propietat2="valor”> </element>
+
+Aquestes opcions no son recomanables donat que són molt difícils de seguir i de mantenir.
+Enllaçar css amb html (II)
+
+Codi ordenat
+El nostre codi ha de ser llegible, entenedor i mantenible per nosaltres mateixos al llarg del temps i  per qualsevol altra persona del nostre equip de desenvolupament. Per això és molt important seguir una sèrie de pautes que ens permetin mantenir un codi ordenat:
+Indentar sempre el nostre.
+Escollir noms (identificadors) que siguin descriptius, que expliquin què fan.
+<div class=”content-video”> …. </div>
+Seguim el mateix ordre en HTML que en CSS. Les característiques globals les posarem a dalt de tot. Afegir un índex en el nostre fitxer CSS sempre ajuda a ubicar-nos.
+
+
+
+CSS3
+
+Conceptes bàsics
+
+Sintaxi
+Propietats bàsiques
+
+
+Sintaxi de CSS
+
+
+
+
+selector: En la seva forma més senzilla fa referència a la mateixa etiqueta HTML la qual volem asignar un estil, un identificador, una classe o selectors complexes.
+propietat: existeixen una llista de propietats definides.
+valor: segons la propietat tindran unes característiques concretes.
+El codi CSS anirà en un arxiu amb extensió *.css
+selector {	propietat:"valor";}
+
+Estructura de CSS
+
+
+
+
+
+
+CSS està en continua evolució i els navegadors van afegint noves funcionalitats.
+La web Can I Use ens permet saber si està o no en ús un atribut o funcionalitat.
+
+Existeixen centenars de propietats i és impossible saber-ne totes, però tractarem de veure les més importants i les que ens permetin fer el màxim de coses.
+En aquest enllaç trobareu la Referència CSS del Mozilla Developer Network
+Propietats bàsiques
+
+font-family: tipus de lletra
+font-family: Helvetica
+font-family: "Trebuchet MS", Verdana, sans-serif;
+font-size: tamany de lletra.
+12px | 1.5em
+1em => tamany actual. Xem => X*tamany actual
+font-weight: gruix (normal|bold|lighter|bolder)
+font-style: estil (normal|italic|oblique).
+letter-spacing: espai entre lletres.
+line-height: espai entre línies / alçada de la línia.
+text-decoration: estils en el text (underline | overline)
+text-align: alineació del text (left | right | center | justify)
+
+Propietats - Text
+
+color: color de l’element. Els valors poden estar definits en diferents formats (més exemples)
+Nom del color 
+Valor hexadecimal
+#00ff00
+#RedGreenBlue
+Valor RGB
+rgb(214, 122, 127)
+Valor RGBA (alfa)
+rgba(214, 122, 126, 0.5)
+Propietats per colors
+
+background-color: color del fons de l’element.
+background-image: utilitzar una imatge de fons.
+background-repeat: utilitzar una imatge de fons com a mosaic. Permet diferents modalitats d'organització de la imatge (veure detalls en material de referència).
+opacity: opacitat de l’element. Va des de 0 (completament transparent) fins a 1 (sòlid). Un valor de 0.5 seria, per tant, un nivell de transparència del 50%.
+
+
+Propietats per a  colors i fons
+
+A partir del codi HTML, crea un fitxer CSS amb els estils necessaris per que la pàgina tingui aquesta aparença. No es pot modificar el fitxer html, només per afegir l’enllaç en el css.
+	
+Exercici 1 - Snatch
+
+CSS3
+
+Selectors
+
+Selector universal
+Selector per etiqueta
+Selector descendent
+Selector adjunt
+Selector de classe
+Selector d’identificador
+
+
+Selector
+
+
+
+
+
+Selector universal o per etiqueta
+¿A quina etiqueta hem d’aplicar l’estil?
+Podem voler aplicar un estil a tots els elements, a totes les etiquetes, parlem d’un selector universal *. Aquest disseny afecta a tots per igual.
+*{	color: blue;
+font-size: 2em;}
+
+Aplicarem l’estil a l’etiqueta HTML concreta a la qual volem definir l’estil.
+h2{	color: red;}
+
+
+
+
+Selector per etiqueta
+Si diverses etiquetes tenen el mateix estil, podem concatenar-les y així reduïr codi i fer-lo més mantenible. Agrupem les propietats comunes de diversos elements en una única regla CSS.
+h2, h3{	color: #8A8E27;	font-weight: normal;	font-family: Arial, Helvetica, sans-serif;}
+
+És una pràctica habitual per a, posteriorment definir les propietats específiques d’aquests mateixos elements.	h2{font-size: 2em;}	h3{font-size: 1.5em;}
+
+
+Selector descendent
+Selecciona els elements que es troben dins d'altres elements. Un element és descendent d’un altre quan es troba entre les etiquetes d’obertura i de tancament de l’altre element.
+
+p span{	color: red;}
+h1 span{	color: blue;}
+
+▪ Els elements <span> que es troben dins d’un element <p> es mostren de color vermell.
+▪ Els elements <span> que es troben dins d’un element <h1> es mostren de color blau.
+▪ La resta d’elements <span> de la pàgina, es mostren amb el color per defecte aplicat pel navegador.
+
+Selector descendent
+No s’ha de confondre el selector descendent amb la combinació de selectors:
+
+l’estil s’aplica a tots els elements "p", "a", "span" y "em"	p, a, span, em { text-decoration: underline; }
+
+
+
+L’estil s’aplica només als elements "em" que es troben dins de "p a span"	p a span em { text-decoration: underline; }
+
+
+Selector descendent
+Si s’utilitza el selector descendent, fa referència a qualservol punt de la descendència (fill, net, besnet…). Tots sortiran en vermell.	p a { color: red; }
+
+
+No obstant, al utilitzar el selector universal, a partir del “net” (segon nivell de descendència)  sortirà en vermell.	p * a { color: red; }		
+
+Seguint l’exemple anterior, volem que només Enlace 1 sigui vermell.
+Etiquetes que estan directament dins (niuades) d’una altra etiqueta especificada.
+
+
+
+
+
+Ara volem que només Enlace 2 surti en vermell.
+Etiquetem utilitzant el selector universal els anchor que estiguin dins d’algun tag que estigui dins d’un paràgraf.
+
+
+Selector de descendència directa (fill, net...)
+p > * > a { color: red; }
+p > a { color: red; }
+
+Germans: Etiquetes que estan al mateix nivell, mateixa jerarquía que la indicada, encara que hi hagi altres etiquetes pel mig.
+
+
+
+
+	
+Selector descendent, germans
+p ~ p { color: orange; }
+
+Adjacents: Etiquetes que estan just després d’una altra etiqueta concreta.
+
+
+
+
+
+
+	
+Selector adyacente
+p + p {color: green;}
+
+Imaginem que només volem aplicar un estil a uno o diversos paràgrafs concrets.
+Identificar, marcar el paràgraf que ens interessa informant el seu atribut class amb un o diversos valors.
+
+
+
+
+
+Podem definir en el CSS només el nom de la classe i així poder utilitzar-lo amb les etiquetes que vulguem o relacionar-ho en una etiqueta afitant d’aquesta manera el seu abast.
+	
+Selector de clase (.)
+.titular { color: green; }
+.destacado {text-decoration: underline;}
+em.destacado {color: blue;}
+
+Utilitzarem un identificador id per a definir un estil molt concret, per a un moment determinat. Aquest identificador ha de ser l’únic i no tornarem a utilitzar-lo la resta del nostre fitxer HTML, en caso contrari s’hauria de repensar si fos convenient d’utilitzar una classe i no un identificador.
+
+
+
+
+	
+Selector d’identificador (#)
+p#titular { color: green; }
+p#destacado {text-decoration: underline;}
+
+Alguns elements (etiquetes) d’HTML poden tenir propietats pròpies de l’element i segons aquesta característica també podrem definir un estil.
+
+
+
+
+
+	
+Selector d’atribut
+h1[title=”secundario”] { color: orange; } /*que tenga ese valor*/
+h2[title=”titulo”] { color: green; }
+h1[title] { color: red; } /*que tenga ese atributo*/
+h3[title ~=”titulo”] { color: green; } /*que contenga este valor*/
+	h3[lang^=”es”] { color: blue; } /*empieza por*/
+https://www.w3schools.com/css/css_attribute_selectors.asp
+
+Et proposo un joc. Tracta de fer els nivells (1-14 y del 27 al 32) , tens una ajuda a la teva dreta.
+Pots fer la resta, són selectors que no hem vist, però amb l’ajuda  segur que ho aconsegueixes! :)
+
+Flukeout
+
+
+
+Juga
+
+Modifica el fitxer html de l’exercici anterior, afegint el que sigui necessari (classes) per a que ara tingui aquest aspecte. Segueix definint el CSS en un fitxer a part de CSS.
+h2 en degradat (canvia la tonalitat del gris / canvia d’estil) sense utilitzar classes ni id.
+assignar estil segons l’actor
+modificar l’estil de l’anchor de la llista (verde y mayúsculas) sense modificar el text en html.
+	
+Exercici 2 - Snatch
+
+CSS3
+
+Cascada
+
+Cascada
+Cascada vs Herència
+
+En CSS és molt important la jerarquía, programem en cascada. 
+Ordre en el que s’apliquen els estils:
+CSS del navegador que s’estigui utilitzant.
+Característiques que tingui configurat l’usuari al seu navegador.
+Els arxius CSS enllaçats en l’ordre en el que han sigut afegits <link>, és a dir que quedarà com hagi indicat l’últim arxiu enllaçat.
+Les propietats que s’hereten, l’estil dels meus pares...
+Les propietats pròpies de l’element, les específiques de l’element.
+Classes assignades, i en el mateix ordre en el que estiguin definides en el CSS (quedarà com indica la última classe).
+Els identificadors (id, ha d’estar escrit després de l’atribut class, si hi és))
+Escriure directament l’estil en la pròpia etiqueta, en el codi html.
+!important, será l’últim que tindrem en compte!
+Cascada
+
+
+La cascada en els fulls d’estil significa, tal i com hem vist, que l’ordre de les regles importa en CSS, quan dues regles tenen la mateixa especificitat, s’aplica la que apareix en últim lloc en el CSS.
+
+El concepte d’herència, implica que algunes propietats CSS hereten per defecte els valors establerts en l’element pare, el que els conté, però altres no. Compte, això pot donar lloc a equívocs.
+Cascada vs Herència
+
+CSS3
+
+Unitats de mesura
+
+Absolutes
+Relatives
+Percentuals
+
+
+Són mesures que poden ser específiques de zones concretes del món, i està bé saber-les.
+
+Serà el navegador el que faci els càlculs per ocupar en píxels el tamany determinat.
+
+in (inche o polzades): 1in = 2.54cm
+cm: centímetres
+mm: mil·límetres
+pt (puntos): 1pt = 0.35mm, acostuma a utilitzar-se per a impressió.
+pc (picas): 1pc = 12pt = 4.23mm
+
+Absolutes
+
+Percentuals
+Són mesures relatives, que ens van bé per a fer la nostra web responsive.
+
+En realitat, podem dir que les mesures relatives, són fixes en el mateix dispositiu. És a dir, dins d’un mateix dispositiu 100px, serán sempre el mateix. El que cambia és entre dispositius.
+
+Posar un percentatge % voldrà dir que ocuparà aquest percentatge, però del pare, de l’element directament anterior.
+
+
+
+Tamany: width i height
+width = 100 px → Fixem el tamany a un determinat nombre de pixels.
+width = 50% → indiquem quin percentatge és el que ha d’ocupar l’element, respecte al pare, element que el conté directament.
+min_width = 250 px → Fixem un tamany mínim.
+max_width = 400 px → Fixem un tamany màxim.
+
+El mateix per a height.
+
+Si fixem algún tamany, usualment fixem un dels dos tamanys i l’altre indiquem un percentatge.
+
+
+
+
+CSS3
+
+Model de caixa
+
+
+
+
+
+Propietats bàsiques: model de caixa
+
+Propietats bàsiques: model de caixa
+Els elements es troben en “caixes” amb propietats que són com les capes d’una ceba i que donen molt joc a nivell estètic amb espais i llindars(bordes). Aquestes propietats són comunes a tots els elements.
+
+
+width: estableix l’amplada de l’element. Poden ser valors absoluts o relatius al contenidor de l’element.
+height: similar a width per a l’alçada de l’element.
+
+Propietats bàsiques: model de caixa
+padding: espai entre el border de l’element i el seu contingut. És un recobriment intern (–left, -right, -top o –bottom).
+border: és el recobriment que envolta al nostre element i podem escollir entre (–left, -right, -top o –bottom).
+margin: espai exterior al recobriment de l’element que manté amb els elements veins (–left, -right, -top o –bottom).
+background-color: color de fons
+background-image: imatge de fons
+vertical-align: alineament vertical
+text-align: alineament del text
+
+
+
+Margin i Padding
+Margin: Fem referència al recobriment extern
+
+margin: 20px; → tots iguals
+margin: 20px 50px; →TOP y BOTTOM
+margin: 30px 50px 3% 15%; → Seguint les agulles del rellotge anem de TOP, RIGHT, BOTTOM, LEFT
+També podem especificar uno a uno: margin-bottom, margin-left, margin-right, margin-top
+
+Padding: Fa referència al recobriment intern
+
+
+
+Tenint aquest codi HTML, crea un fitxer CSS que aconsegueixi obtenir el resultat de la imatge
+
+
+	
+Exercici 3 - Model Caixa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Properties</title>
+    <link rel="stylesheet" href="css/box_properties.css">
+</head>
+<body>
+<div class="figure1">Lorem ipsum dolor sit amet.</div>
+<div class="figure2">Lorem ipsum dolor sit amet.</div>
+<div class="figure3">Lorem ipsum dolor sit amet.</div>
+<div class="figure4">Lorem ipsum dolor sit amet.</div>
+<div class="figure5">Lorem ipsum dolor sit amet.</div>
+<div class="figure6">Lorem ipsum dolor sit amet.</div>
+<div class="figure7">Lorem ipsum dolor sit amet.</div>
+</body>
+</html>
+
+CSS3
+
+Display
+
+
+
+
+Visibilitat de les capes
+Visibility és la propietat que permet no fer visible un elemento però ocupa el seu espai, és a dir que de cara a la resta d’elements, el tindran en compte a l’hora de posicionar-se. Pot adquirir els valors hidden, visible
+
+Opacity és la propietat que  prenent valors entre 0 i 1 podrem fer que sigui totalment sòlid o bé translúcid, fins i tot transparent.
+
+La propietat z-index decideix quins objectes estan al davant i quins al darrere. Representa la posició en l’eix Z=-99,...,0,1,2,3…...99; com més gran sigui, més al davant hi serà.
+
+
+Overflow
+La propietat d’overflow serveix en el modelatge de caixes per indicar al navegador què és el que s’ha de fer amb el contingut que no s’afita dins d’una capa, segons les dimensions que se li han assignat. 
+
+visible → Mostra tot encara que no s’afiti.
+hidden →  No mostrará allò que sobresurt, retalla tot allò que no s’afiti a la finestra.
+scroll → Apareix un scroll per poder veure tot el contingut però només dins de l’espai de la finestra que retalla el contingut.
+auto →Només si és necessari apareix un scroll.
+
+
+Float, és la propietat que li donem a l’element quan volem que la resta el vagin envoltant. Depenent d’allò que vulguem respecte la resta d’elements és aconsellable posar-hi display = inline-block.
+
+float = right/left → Coloquem l’element a l’esquerra o a la dreta. 
+
+
+Float, Clear
+
+Float, Clear
+Clear, és la propietat que esborra el float, deixa de fer cas a la propietat de Float.
+
+clear = left, both, right →  Neteja el float, per a que deixi d’aplicar-se.
+
+
+
+
+Genera el fitxer HTML i el CSS per acabar d’obtenir aquest resultat:
+
+
+	
+Exercici 4 - Float
+
+Exercici 5
+Amb tot el vist a classe, genera un fitxer HTML ben estructurat i el fitxer CSS que permeti aconseguir aquest resultat.
+
+
+
+¿Recordes l’Exercici3 d’HTML? Tens l’estructura feta, ara toca posar-hi estil tal i com indica la imatge.
+
+Fixa’t en tots els detalls...
+
+
+
+
+
+
+
+
+
+
+Exercici 6
+
+Referencia de CSS: Web de manual de referencia de CSS
+Librosweb: un lloc gratuit fantàstic per aprendre tot sobre HTML y CSS, y molt més.
+W3Schools: un lloc de referència que ve molt bé per consultar puntualment dubtes tècnics molt concrets.
+CSS Tricks: aquí trobaràs exemples de codi CSS molt originals i molt avançats en alguns casos. Una font fantàstica per convertir-te en un profesional si ho desitges.
+Zengarden: un lloc clàssic amb molts dissenys per inspirar-nos. No està tan orientat a aprendre a programar els dissenys com CSS Tricks, sinó molt més a inspirar-nos amb el resultat final.
+
+
+
+	
+Referencies
+
+Són les que hem d’utilitzar sempre en el desenvolupament web.
+
+PX: Es una mesura relativa donat que s’anirà adaptant a la pantalla i la seva resolució.
+
+EM: Pren el tamany dels que li venen per herència i en base a això agafa l’amplada de la M, que serà la mesura que prengui com a referència. Escalem.
+És a dir, relaciona el tamany de font amb el tamany de font HERETAT DEL PARE
+
+REM: No funciona per herència, es basa en la font definida en el root <body>,  en base a això agafa l’amplada de la M, y escalem.
+És a dir, relaciona el tamany de font amb el tamany de font DEFINIT AL BODY
+
+
+Relatives (I) (converter)
+Abans absolutes
+
+Aquestes mesures s’utilitzen MOLT RARAMENT
+
+
+EX: Pren la mesura dels que li venen per herència i en base a això agafa l’alçada de la x, que serà la mesura que prengui com a referència. Escalem.
+És a dir, relaciona el tamany de font amb L’AMPLADA de font HERETAT DEL PARE
+
+REX: No funciona per herència, es basa en la font definida en el root <body>,  base a això agafa l’amplada de la x, i escalem.
+	És a dir, relaciona el tamany de font amb L’AMPLADA de font DEFINIT AL BODY
+Relatives (II) (converter)
+Abans absolutes
+
+Després Display
+
+Display (I)
+La propietat display permet especificar el tipus de caixa que s’aplica en un element. Els diferents tipus de caixes corresponen a diferents tipus de contingut (text, llistes, taules)
+none: fa que no es generi caixa, l’element desapareix, deixa de ser visible i no ocupa cap espai.
+inline: caixa en línia que pot ocupar diverses línies.
+No permet especificar width o height
+Els margin i padding NO son respectats
+
+Display (II)
+La propiedad display permet especificar el tipus de caixa que s’aplica en un element. Els diferents tipus de caixes corresponen a diferents tipus de contingut (text, llistes, taules)
+block: caixa rectangular que forma un bloc i fa un salt de línia
+Permet especificar width o height
+Els margin i padding SON respectats
+Afegeix un return al final de cada caixa
+inline-block: caixa en línia, però que es formata amb una caixa de tipus block.
+Permet especificar width o height
+Els margin i padding SON respectats
+Afegeix les caixes en la mateixa línia
+
+Display (III)
+La propiedad display permet especificar el tipus de caixa que s’aplica en un element. Els diferents tipus de caixes corresponen a diferents tipus de contingut (text, llistes, taules)
+none: fa que no es generi caixa, l’element desapareix, deixa de ser visible i no ocupa cap espai.
+block: caixa rectangular que forma un bloc i fa un salt de línia
+inline: caixa en línia que pot ocupar diverses línies.
+inline-block: caixa en línia, però que es formata amb una caixa de tipus block.
+
+Flexbox
+La propietat flexbox permet agrupar diverses caixes en un mateix “super”-contenidor (que engloba aquestes caixes. Normalment serà un <div>) i fer que aquestes caixes tinguin un comportament similar i normalment paral·lel per tal de reaccionar totes de forma uniforme en una web normalment “responsive”. Les seves principals característiques són:
+
+Distribuir espai entre els elements continguts a la caixa flexible per tal de que es comportin de forma previsible. (Usualment en redimensionaments de la pàgina)
+Expandir i reduir la mida dels elements per emplenar l’espai disponible i ajustar-los per prevenir “overflow”
+
+Position(I) (exemples)
+Position és la propietat que indica en quin lloc de la pantalla volem posicionar el nostre element.
+static: No fa cas de les coordenades, els objectes es van posicionant un rere l’altre segons el seu display.
+És a dir, es col·loca on li toca amb el “transcurs normal” de la pàgina. Allà on “li toca”. És a dir, SENSE MODIFICAR LA SEVA POSICIÓ PER DEFECTE.
+absolute:Es col·locarà on indiquin les coordenades (top,left,bottom,right), col·locant-se en aquell punt RESPECTE DEL PARE
+relative: Indicarà què será respecte al pare, respecte a l’element que el contingui.  Indicarem llavors les coordenades en les que volem que hi sigui  (pot ser negatiu.) tenint en compte quin sería la posició original que li pertocaria per defecte.
+És a dir, el relative és una modificació RESPECTE A LA SEVA POSICIÓ PER DEFECTE.
+
+
+
+Position(II) (exemples)
+Position és la propietat que indica en quin lloc de la pantalla volem posicionar el nostre element.
+fixed: Sempre posiciona les seves coordenadas respecte al body i a més a més es quedarà sempre fixe, sempre visible, ancorat a la pàgina 
+És a dir, l’element es quedarà fixe allà on li has dit a la pàgina.
+sticky: És un relative i un fixed a la vegada, és relatiu mentre es visualitza el pare i si fem scroll pasa a ser fixed i serà sempre visible.
+És a dir, es col·loca en la seva posició per defecte, i llavors es manté FIX en aquella posició.
+Per a veure exemples:
+https://www.w3schools.com/css/css_positioning.asp
+

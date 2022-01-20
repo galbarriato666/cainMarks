@@ -1,0 +1,519 @@
+HTML5
+M04 - Llenguatge de Marques
+Eduardo Tejero
+Alicia Vázquez
+
+Una mica d'història
+HTML comença el 1980 amb Tim Berners-Lee 
+La primera descripció d’HTML se va publicar el 1991 
+1993 primer standard IETF (Internet Engineering Task Force)
+1995 HTML 2.0 standard oficial
+1997 HTML 3.2 i és la primera recomanació d’HTML publicada pel W3Consortium.
+1998 HTML 4.0 
+W3C se va centrar en el desenvolupament de l'estàndar XHTML, que no va tenir l’èxit esperat.
+2004 WHATWG repren la iniciativa y defineix l’estàndar HTML 5
+
+Però què és HTML5 ? Definició
+
+
+Html5 (infografía)
+HTML5 (HyperText Markup Language, versión 5) es la cinquena revisió important del llenguatge bàsic de la World Wide Web, HTML. 
+Va néixer el 2004, quan es va fundar el grup de treball WHAT amb membres d’Apple, la Fundació Mozilla y Opera Software. Dos anys després van aconseguir un dels seus principals recolzaments, doncs el W3C (World Wide Web Consortium) va decidir abandonar XHTML i va començar a treballar amb WHAT.En 2008 va finalitzar la seva primera versió. Això va permetre que Firefox 3 y Mozilla, fosin compatibles amb HTML5. Més endavant s'afegeixen Internet Explorer, Google Chrome y Safari.Poc a poc es van anar afegint empreses i es va anar abandonant l’ús de tecnologies com Flash. De fet, el setembre de 2011, 34 de les 100 pàgines amb més tràfic segons el ranking d’Alexa utilitzaven aquest llenguatge.
+HTML5 és un llenguatge estable des de 2013.
+
+Una mica d'història
+Modem a 56K en 1994
+
+Html5
+HTML no és un llenguatge de programació, és un llenguatge de marques. Serveix per estructurar la informació i permet que el contingut sigui fàcilment analitzable.
+Defineix el QUÈ y ÓN
+
+CSS
+CSS (Cascading Style Sheets), en català "Fulls d’estil en cascada", és un llenguatge de disseny gràfic per definir i crear la presentació d’un document estructurat escrit en un llenguatge de marques.
+És molt utilitzat per establir el disseny visual dels documents web, i “interface” d’usuari codificades en HTML o XHTML; el llenguatge pot ser aplicat a qualsevol document XML, que inclou XHTML, SVG, XUL, RSS, ... També permet aplicar estils no visuals, com els fulls d’estil auditives.
+CSS està dissenyat principalment per marcar la separació del contingut del document i la forma de presentació del mateix, característiques tals com les capes o layouts, els colors i les fonts.
+
+CSS3
+CSS no és un llenguatge de programació. Serveix per donar format al contingut estructurat com un llenguatge de marques.
+Defineix el COM
+
+
+HTML5
+
+Sintaxis de HTML
+
+
+
+Us recorda quelcom???
+Ejemplo:<p id="primer" class="grande">	Hola Mundo!</p>
+class → farà referència a un estil definit en el CSS.
+id → és l’identificador de l’element en el DOM (Document Object Model)
+<etiqueta atribut="valor">	contingut</etiqueta>
+
+Estructura
+
+HTML
+
+Estructura
+
+Head
+Body
+
+
+Estructura HTML (head)
+<!DOCTYPE html><html lang="en">	<head> <!-- informació de la pàgina y serà la primera cosa que es carregui-->		<meta charset="UTF-8">		<title>Document</title>		<!-- 		enllaçar arxius css		enllaçar arxius js		afegir fonts externes		metadades (keywords, descriptions, robots, author, owner)		 -->	</head>	<body> <!-- contingut de la pàgina -->	</body></html>
+
+head (html-head)
+L’etiqueta <head>conté informació que es precarrega en el navegador i NO es visualitza. Pel que mai trobarem contingut propi de la pàgina sinó informació necessària per la seva renderització (javascript, css, metadades o d’altres). 
+<title> és on indicarem el nom de la pàgina que volem que surti a la pestanya del navegador.
+
+<link> és l’etiqueta que ens permet “incloure” diversos fitxers entre ells l’icona de la pàgina.
+<link rel="icon" type="image/gif" href="favicon.gif">
+Però també utilitzarem <link> o <script> per fer referència a fitxers css y js que hi hagi al nostre web.
+<script src="[file_name].js"></script>
+<link rel=¨stylesheet¨ type=¨text/css¨ href=¨[file_name].css¨>
+
+
+
+
+
+
+head
+<meta> és l’etiqueta que ens permet definir metadades de la nostra pàgina; per exemple l’autor, una descripció per a navegadors, etc.
+
+<meta charset="utf-8">
+<meta name="author" content="Chris Mills">
+<meta name="description" content="The MDN Learning Area aims to provide complete beginners to the Web with all they need to know to get started with developing web sites and applications.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+HTML
+
+Estructura
+
+Head
+Body
+head
+main y div
+section y article
+aside
+footer
+
+
+body (tag-body)
+El  body  és l’element principal, el contenidor de tota la informació que serà renderitzada en el navegador i per tant aquí és ón anirà tot el nostre contingut, la informació a mostrar.
+
+
+
+Estructura
+
+Estructura HTML (body)
+<!DOCTYPE html><html lang="en">	<head><title></title></head>	<body>
+<header>Logo, título principal, menús de navegación, etc…
+<hgroup>
+<h1>Título principal</h1>
+<h2>Subtítulo</h2>
+</hgroup>
+<nav>Menú navegación</nav>
+</header>
+<main>Pondremos todo el contenido
+<section> <!--Sección del contenido-->
+<article> <!--artículo dentro de la sección-->
+<h3>Título del artículo</h3>
+<p>Contenido del artículo</p>
+</article>
+</section>
+</main>
+<footer>Document</footer></body></html>
+
+header (tag-header)
+El  header no confondre amb head, és l’element que engloba a tots els elements que pertanyen a la capçalera de la nostra pàgina.
+
+Dins del qual trobem el títol de la pàgina (h1 y h2, en un hgroup) el logo (en una img), el menú de navegació (nav) y potser un cercador, enllaços a xarxes socials utilitzant icones i/o canvis icones que ens permeten canviar d’idioma la nostra web.
+
+Són el conjunt dels múltiples elements que ens permeten navegar pel nostre web i identificar-lo, moltes vegades serà aquest element el que volem que sigui sempre visible.
+
+
+h1, h2, h3, etc (tag-hn)
+Cada h1, h2, h3 representa un títol dins del nostre web que será la manera d’organitzar la nostra pàgina.
+
+SEO - Posicionament.
+H1, ha d’estar dins del header donat que és el primer que analiza Google per posicionar la nostra web. Només haurem de tenir un sol H1.
+
+De la mateixa manera, com més títols de la resta de tipos posem, més queda diluït la seva importància a l’hora de posicionar-nos.
+
+hgroup
+L’etiqueta hgroup ens permet agrupar els elements h1...h6 indicant que hi ha un grup de títols. Podem trobar-la tant en el header del body como en el header de qualsevol altre element: article, section, aside, footer.
+
+<hgroup>
+<h1>Título principal</h1>
+<h2>Subtítulo</h2>
+</hgroup>
+
+
+Crea la teva primera pàgina html, hello.html usando VSC, instala’t els plugin d’HTML5.
+Posa-li un títol.
+Un autor
+Una descripció
+Afegeix una icona (favicon)
+I que el body tingui aquest contingut:
+
+
+
+
+
+
+
+
+
+
+
+Exercici 1 - Hello World
+
+nav (tag-nav)
+La etiqueta nav indica que hi ha un menú de navegació i agrupa la resta d’elements que permeten moure’ns dins de la pàgina o enllaçar a d’altres pàgines del site.
+Dins de nav podem trobar:
+ ul: S’utilitza per definir una llista d’elements sense ordre [unordered] (punts).
+ol: Defineix una llista ordenada [ordered] de elementos (números)
+ li: Representa un element de la llista.
+ a: Enllaç (anchor).
+
+
+
+anchor (tag-header)
+Dins d’un element de la lista (li) podem definir l’enllaç que tingui, per això utilitzarem:
+a: Tot el seu contingut serà el que ens envii a l’enllaç definit. 
+href: Atribut en el que indicarem la direcció de l’enllaç (url, directori, identificador).
+target: Si s’obre en una nova pestaña o no, per defecte s’obrirà en la pestanya actual. En cas de que volguem que s’obri en una nova pestanya hem de posar el valor _blank
+NOTA: <a> debe estar sempre dins de l’element de la llista, no a l’inrevés. En ambdós casos funciona, pero no és correcte. 
+<a href=”#” target=”_blank”><li>enlace</li></a>
+<li><a href=”#” target=”_blank”>enlace</a></li> 
+
+
+
+A la pàgina de l’exercici anterior afegeix un menú de navegació, una llista d’elements amb enllaços que permetran en un futur afegir més pàgines.
+Menú de navegació com a mínim 4 enllaços (extern, intern, amb referència a la pròpia página i a una altra del nostre directori)
+
+
+
+
+
+
+
+
+
+
+
+Exercici 2
+
+main y div (tag-header)
+<main></main> és on està la informació principal del cos de la nostra pàgina. Només pot ser fill de body i només pot aparèixer un cop. No podem trobar-lo enlloc més. Dins definirem una àmplia estructura de contingut.
+<div></div> és l’etiqueta més utilitzada donat que permet agrupar elements, això ens permet organitzar-nos. Tots els elements que poden ser agrupats que vagin junts, els ficarem en un div. Compte de no abusar-ne donat que existeixen etiquetes específiques per organitzar la informació.
+
+
+
+article (tag-header), section (tag-header)
+Encara que <article></article> també engloba molts elements diferents que junts donen un contingut, que forma un únic element, un post.
+→ article, engloba elements, que tots ells representen un element d’informació, per separat, no tenen sentit.
+L’etiqueta <section></section> permet englobar un conjunt de contingut que té relació entre ell. Podem tenir dins d’una secció, <section>, molts altres elements, el que és important és que tots estan relacionats entre ells a nivell de temàtica.
+→ section uneix elements a nivell conceptual, elements que tracten el mateix contingut, però per separat tenen sentit.
+
+
+aside (tag-header)
+L’ <aside></aside> conté els elements que no són part del contingut principal, però que sí están relacionat amb ell. Posarem dins d’un <aside>, suggerències, contingut que pot interessar i enllaços externs.
+Pels cercadors, el contingut que estigui dins d’<aside>, serà menys rellevant.
+
+
+p (tag-p)
+L’etiqueta <p></p> de paràgraf és essencial per introduir contingut dins de la pàgina. Tota la informació de text haurà d’estar continguda en aquest element. Cada vegada que tanquem l’etiqueta es crearà automàticament un salt de línia.
+Per a poder afegir voluntàriament un salt de línia podem utilitzar l’element <br> que no es tanca i és element empty.
+
+<article>
+   <h1>Mi primera página</h1>
+   <!-- Aquí va un comentario que no es interpretado por el navegador -->
+<p>Hola mundo, esta es un página con titular, 
+ 	que tiene también un párrafo y <br>unos cuantos saltos de línea.</p>
+</article>
+
+
+DAW 16/01
+
+Estructura
+
+HTML
+
+Estructura
+
+Head
+Body
+Footer
+
+
+footer
+<footer></footer> és l’etiqueta que indica el peu de pàgina, la trobarem per tant al final del codi.
+Normalment ens trobarem un sol footer, encara en pàgines molt granes podem trobar-nos algun més, per finalitzar un secció, però no és l’habitual i no ha de causar sorpresa.
+<adress></adress> és una etiqueta típica del footer en la qual trobarem la direcció postal de la entitat de la pàgina.
+
+
+Segueix amb el mateix exercici anterior i seguint l’estructura vista anteriorment en els apunts i ajudant-te amb aquesta imatge (html, head, body, main, section, article, p) afegeix al fitxer html:
+Divideix 4 articles (tenen estructura pròpia) en 2 seccions diferents (cadascun amb títol).
+Ha  d’haver una zona per publicitat amb enllaços externs.
+Afegeix un peu de pàgina amb informació del site.
+
+Fes l’arbre de l’estructura
+
+
+
+
+
+
+
+
+
+
+Exercici 3
+
+HTML
+
+Elements específics
+
+
+Èmfasi
+Imatges
+Audio
+Video
+Taules
+
+
+span, strong, em (text-formatting)
+Etiquetes per emfatitzar el contingut:
+<strong></strong> ens  permet fer més èmfasi a aquell text, donar-li més força semàntica, destacar-lo. Visualment es veurà en negreta (o no), però aquesta no és la seva missió, en CSS podem canviar-ho. El seu propòsit és destacar un text respecte la resta per a que els cercadors puguin trobar-lo.
+<em></em> és una etiqueta que de la mateixa manera  que <strong> permet donar més rellevància a la part del text que conté, perà en aquesta vegada, el seu format serà en italic(cursiva), que podem canviar amb el nostre CSS.
+L’etiqueta <span></span> que no fa salts de línia, visualment en el navegador no hi ha  cap mena de canvi, no és un bloc independent. Ho utilitzarem per poder canviar l’estil diferent en el CSS.
+
+
+DAW 16/01
+
+etiquetes per donar format (text-formatting)
+Són aquelles etiquetes que no donen valor (semàntic) al contingut sinó que únicament les utilitzem per canviar la manera visual del text en qüestió.
+
+DAW 16/01
+
+figure, figcaption, img 
+<figure></figure> És l’etiqueta específica per posar una imatge dins del nostre html.
+Utilitzarem l’etiqueta <img> i utilitzarem els atributs: 
+src (source) per indicar la ruta relativa de la imatge.
+alt* per indicar el text informatiu que apareix quan posem el ratolí per sobre.
+
+Afegirem l’etiqueta <figcaption></figcaption> per posar el text que acompanya a la imatge, la seva llegenda.
+*L’atribut alt ha d’estar sempre informat, donat que els cercadors la utilitzen per entender quin contingut té la imatge.
+
+
+audio
+L’etiqueta <audio></audio> és la que ens permet afegir un audio dins de la nostra pàgina. A més a més haurem d’informar els següents atributs:
+src (source) per indicar la ruta relativa de l’arxiu.
+type per indicar de quin tipus d’arxiu es tracta (audio/extensió: audio/wav, audio/mp3, etc)
+controls  per activar els controls de reproducció d'àudio (play, stop, etc).
+
+
+
+
+
+
+video
+L’etiqueta <video></video> és la que ens permet afegir un vídeo dins de la nostra pàgina. A més a més haurem d’informar els següents atributs:
+src (source) per indicar la ruta relativa de l’arxiu.
+type per indicar de quin tipus d’arxiu es tracta (video/extensió: video/mov, video/mp4, etc)
+controls per activar els controls de reproducció d'àudio (play, stop, etc).
+
+NOTA: No obstant, per evitar problemes de reproducció segons el navegador del client i del pes de l’arxiu, el millor és pujar-ho a youtube (el codi ens el dona youtube):
+Utilitzar <iframe></iframe>per afegir un enllaç al vídeo en youtube:
+width, height  per marcar l’amplada i l'alçada del reproductor, en pixels.
+src (source) per indicar la ruta de l’arxiu, en aquest cas una url
+frameborder=”0” per activar els controls de reproducció d'àudio (play, stop, etc).
+allowfullscreen permet reproduïr el vídeo a pantalla completa (no cal donar-li valor, només afegir aquesta propietat)..
+
+
+
+FALTA!!!!!!!
+
+audio, video (atributs)
+Les etiquetes <audio> y <video> poden tenir els següents atributs (propietats).
+controls Atribut booleà que activa un conjunt de controls de reproducció integrats. (pausa, buscar y ajustar volum).
+poster Cadena que representa una imatge de marcador de posició i que es mostra en el reproductor de vídeo. Aquesta imatge només es mostra quan un vídeo no està disponible.
+loop 	Atribut booleà que reprodueix el vídeo repetidament fins que s’apreta el botó de pausa en els controls.
+muted Atribut booleà que reprodueix vídeo amb la pista d'àudio desactivada.
+autoplay Atribut booleà que comença la reproducció de vídeo automàticament quan el reproductor té suficient contingut emmagatzemat en búfer.
+preload Atribut booleà que defineix una clau sobre quant emmagatzematge en búffer és necessari.
+
+
+
+
+Ejercicio 4
+A l exercici anterior afegeix una nova pàgina media.html que contingui una imatge, un audio y un video. Fes que:
+La imatge tingui un tamany fixe de 300x600.
+L’audio s’activi a l’entrar en la pàgina.
+La imatge del vídeo sigui el logo del ITB (busca com  fer-ho)
+Insertar un vídeo de youtube.
+
+
+
+
+table,tr, td, th
+Les taules més senzilles d’HTML es defineixen amb tres etiquetes:
+ <table> per crear la taula
+ <tr> per crear cada filera
+ <td> per crear cada cel·la.
+
+A més a més, HTML defineix l’etiqueta <th> per indicar que una cel·la és capçalera d’altres cel·les. Els atributs de l’etiqueta <th> són idèntics que els atributs definits per l’etiqueta <td>.
+Existeixen els atributs rowspan i colspan que ens permeten dir quantes files o columnes ocupa aquella cel·la.	<table>				<tr>					<td></td>					<td></td>					</tr>			</table>
+
+
+table,th, caption
+L’etiqueta <caption> serveix per establir el títol d’una taula.<table><caption>Títol de la tabla</caption>….</table>
+Les parts que composen les taules complexes se defineixen mitjançant les etiquetes:
+<thead>: la capçalera de la taula
+<tbody>: secció de dades
+<tfoot>: el peu de la taula
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+Exercici 5
+A l’exercici anterior afegeix una nova pàgina taula.html que contingui la taula “Análisis de ventas”. Fes que podem arribar a aquesta pàgina des del  menú de navegació.
+
+Utilitza tots els tags de taules (thead, tbody, tfoot)
+
+
+
+HTML
+
+Interacció
+
+Formularis
+Més elements
+
+
+form
+Per crear un formulari en HTML, hem d’utilitzar l’element <form>. A partir d’aquí s’aniran afegint els elements que volem que estiguin en el nostre formulari utilitzant <input type=””>. 
+L’atribut action del <form> ens permet indicar quina acció es portarà a terme en el moment de fer “submit” en el botó del formulari.
+<label> és l’etiqueta que permet posar un nom/títol al camp del formulari.
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+Get / Post
+
+
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+Submit
+by Joan Brun
+
+GET
+POST
+
+
+GET
+GET porta les dades del formulari (navegador web). El mitjà de transmissió és la URL. 
+Les dades les pot veure qualsevol.
+<form action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+POST
+POST consisteix en dades "ocultes" enviades per a un formulari llur mètode d’enviament és post. 
+Es adequat per formularis. Les dades no són visibles.
+L’avantatge d'utilitzar POST és que aquestes dades no són visibles a l’usuari del web. En el cas d’usar get, el propi usuari podria modificar la URL escrivint diferents paràmetres als reales en el seu navegador, donant lloc a que la informació tractada no sigui la prevista.
+
+Recap Get / Post
+
+
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+type
+En l’atribut type de <input> será on indicarem com serà el camp a introduir:
+text: Entrada de texto
+radio: Selector d’una opció. (Rodó)
+checkbox:  Selector d’una opció. (Quadrat)
+submit: Botó que llança l’acció especificada  d’enviar el formulari.
+reset: Esborra tots els valors introduïts deixant els valors per defecte.
+button: Botó al qual podem asignar una acció.
+email: validador de format de correu electrònic (no si la direcció existeix)
+url: Podem comprovar que és una direcció url i afegir http:// en cas que l’usuari no l’hagi posat.
+date: de cara a evitar problemes amb els diferents formats de dates, ofereix a l’usuari un calendari.
+
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+type
+time: hora sobre 24h, oferint un selector d’hora a l’usuari i evitant així problemes de format.
+range: mostra un control lliscant.
+datetime, tel, search, color
+L’element <input> també té altres atributs que podem utilitzar:
+id identificador únic en tota la pàgina HTML
+name nom que li asignem a l’element i que ens permet agrupar label/input o diversos radio
+value valor que té l’element per defecte.
+required indica que és obligatori emplenar el camp.
+disabled mostra l’element deshabilitat.
+readonly només de lectura.
+placeholder és un missatge que surt a l’input informant cóm haurem d’emplenar el camp i desapareix.
+selected indica que la opció està seleccionada.
+tabindex permet utilitzar el tabulador entre els diferents elements (atenció amb l’ordre)
+pattern indiquem un patró.
+
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+HTML
+
+Interacció
+
+Formularis
+Més elements
+
+
+datalist
+Podem crear una llista d’opcions pel type=”list”, asignant el mateix identificador, id,  al input que al datalist.
+
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+progress
+L’element progress és utilitzat per representar un avanç o progrés en l’execució d’una tasca, com pot ser la descàrrega d’un fitxer o l’execució d’una tasca complexa. En el value indiquem quin és el progrés
+
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+meter
+L’element meter és molt similar a progress. S’utilitza per representar escales de mesures conegudes, com la longitut, massa, pes, ús de disc, entre d’altres. Defineix els següents atributs:
+value: representa el valor actual. Si no s’especifica, es pren com valor el primer número que apareix en el contingut de l’element. El seu valor per defecte és 0.
+min: el mínimo valor permès. El valor per defecte es 0.
+max: el més gran valor permès. Si no s’especifica, el seu valor per defecte és 1, a no ser que el valor mínim definit sigui més gran que 1, en aquest cas el valor de max serà igual a min.
+low: és considerat el límit inferior del rang de valors.
+high: és considerat el límit superior del rang de valors.
+optimum: representa el valor òptim de l’element, i es troba entre min i max.
+MAIN: https://developer.mozilla.org/es/docs/Web/HTML/Elemento/main
+
+Exercici 6
+A l’exercici anterior afegeix una nova pàgina formulari.html que contingui un formulari amb totes les opcions que hem vist a classe. Afegeix l’enllaç a aquestes pàgines des del menú de navegació.
+
+¿Què et sembla fer un formulari com a carta als Reis? ¿Heu estat bons jans?
+
+
+<form action=”index.html” method=”get”>
+…
+</form>
+D’aquesta manera veuràs tots els camps a l’URL, però no haurà resposta si no hi ha res en JS.
+
+
+W3CSchools: lloc de referència que on es poden consultar ràpidament dubtes molt concrets
+
+Elements: Tots els elements d’HTML5 classificats. 
+
+Com estructurar una pàgina web: Més enllà de l’HTML hi ha una distribució lògica, humana que ens diu com distribuir la informació. Això i l’ús correcte dels elements que ofereix HTML5 és garantia d’èxit.
+
+
+
+	
+Referències
