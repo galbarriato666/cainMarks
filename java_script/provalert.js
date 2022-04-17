@@ -1,9 +1,10 @@
-// for (inicialización; condición; incremento)
-for (i = 0; i < 5; i++) {
-    console.log("Valor de i:", i);
- }
- 
- // doble contador
- for (i = 0, j = 5; i < 5; i++, j--) {
-    console.log("Valor de i y j:", i, j);
- } 
+//Variable global
+var resultado = 0;
+
+function multiplica (a,b){
+   resultado = a*b;
+}
+
+//fuera de la función
+multiplica(3,7);
+console.log("El resultado de es ", resultado);
